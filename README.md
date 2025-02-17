@@ -5,7 +5,7 @@
 <p align="center">
     <img width="600px" src="static/header.jpg" alt="Header Image">
 <p align="center">
-    <a href="https://github.com/BioDT/Hackathon2025/actions/workflows/ci.yml">
+    <a href="https://github.com/BioDT/Hackathon25/actions/workflows/ci.yml">
         <img src="https://github.com/BioDT/Hackathon2025/actions/workflows/ci.yml/badge.svg" alt="CI Status">
     </a>
     <a href="https://github.com/BioDT/Hackathon25/issues">
