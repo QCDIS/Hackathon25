@@ -19,3 +19,14 @@
 <p align="center">
     This is the central repository of training material that will be used during the BioDT School and Hackathon 2025.
 </p>
+
+## Requirements
+
+- R 
+- Python
+- GDAL
+
+## Instructions
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
