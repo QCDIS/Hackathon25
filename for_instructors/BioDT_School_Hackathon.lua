@@ -7,6 +7,7 @@ local basename = "BioDT"
 
 prepend_path("PATH", pathJoin(envdir, "bin"))
 setenv("PYTHONUSERBASE", pathJoin(workdir, basename, "env", "Python"))
+setenv("R_LIBS_USER", pathJoin(workdir, basename, "env", "R"))
 
 setenv("_COURSE_BASE_NAME", basename)
 setenv("_COURSE_NOTEBOOK", "Hackathon25/README.ipynb")
