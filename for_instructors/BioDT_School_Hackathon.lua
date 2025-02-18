@@ -9,6 +9,9 @@ prepend_path("PATH", pathJoin(envdir, "bin"))
 setenv("PYTHONUSERBASE", pathJoin(workdir, basename, "env", "Python"))
 setenv("R_LIBS_USER", pathJoin(workdir, basename, "env", "R"))
 
+execute {cmd="mkdir -p \"$PYTHONUSERBASE\"", modeA={"load"}}
+execute {cmd="mkdir -p \"$R_LIBS_USER\"", modeA={"load"}}
+
 setenv("_COURSE_BASE_NAME", basename)
 setenv("_COURSE_NOTEBOOK", "Hackathon25/README.ipynb")
 setenv("_COURSE_GIT_REPO", "https://github.com/BioDT/Hackathon25.git")
