@@ -2,3 +2,4 @@ cores: 2
 time: "04:00:00"
 partition: "interactive"
 mem: "3GB"
+working_dir: "/scratch/$PROJECT"
