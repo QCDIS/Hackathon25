@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+dependencies:
+  - jupyter
+  - jupyterlab
+  - nbclassic
+  - python=3.9
+  - ipykernel
+  - scipy
+  - nglview
+  - r-base=4.3.3
+  - r-irkernel
