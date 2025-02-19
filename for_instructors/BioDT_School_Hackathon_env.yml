@@ -10,3 +10,9 @@ dependencies:
   - nglview
   - r-base=4.3.3
   - r-irkernel
+  - rioxarray
+  - matplotlib
+  - pandas
+  - matplotlib-scalebar
+  - numpy
+  - ipywidgets
