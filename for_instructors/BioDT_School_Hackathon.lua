@@ -12,7 +12,7 @@ execute {cmd="mkdir -p \"$PYTHONUSERBASE\"", modeA={"load"}}
 execute {cmd="mkdir -p \"$R_LIBS_USER\"", modeA={"load"}}
 
 -- Search for the latest env and add it to the path
-execute {cmd="export PATH=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env_v* | tail -n 1)/bin:$PATH; echo PATH=$PATH", modeA={"load"}}
+execute {cmd="export PATH=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1)/bin:$PATH; echo PATH=$PATH", modeA={"load"}}
 
 setenv("_COURSE_BASE_NAME", basename)
 setenv("_COURSE_NOTEBOOK", "Hackathon25/README.ipynb")

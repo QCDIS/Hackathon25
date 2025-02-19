@@ -27,9 +27,9 @@ Create the environment where notebooks are run (see [LUMI documentation](https:/
 module load LUMI/24.03
 module load lumi-container-wrapper
 # Check existing environments
-ls -d /projappl/project_465001732/BioDT_School_Hackathon_env_v*
+ls -d /projappl/project_465001732/BioDT_School_Hackathon_env/v*
 # Increment the version number vXXX below
-conda-containerize new --prefix /projappl/project_465001732/BioDT_School_Hackathon_env_vXXX BioDT_School_Hackathon_env.yml
+conda-containerize new --prefix /projappl/project_465001732/BioDT_School_Hackathon_env/vXXX BioDT_School_Hackathon_env.yml
 ```
 
 Create / update the course module (see [LUMI documentation](https://docs.lumi-supercomputer.eu/runjobs/webui/jupyter-for-courses/) for more information):
