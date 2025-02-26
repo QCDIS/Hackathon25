@@ -4,7 +4,7 @@ dependencies:
   - jupyter
   - jupyterlab
   - nbclassic
-  - python=3.9
+  - python=3.12
   - ipykernel
   - scipy
   - nglview
