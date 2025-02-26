@@ -29,7 +29,7 @@ module load lumi-container-wrapper
 # Check existing environments
 ls -d /projappl/project_465001732/BioDT_School_Hackathon_env/v*
 # Increment the version number vXXX below
-conda-containerize new --prefix /projappl/project_465001732/BioDT_School_Hackathon_env/vXXX BioDT_School_Hackathon_env.yml
+conda-containerize new -r BioDT_School_Hackathon_req.txt BioDT_School_Hackathon_env.yml --prefix /projappl/project_465001732/BioDT_School_Hackathon_env/vXXX
 ```
 
 Create / update the course module (see [LUMI documentation](https://docs.lumi-supercomputer.eu/runjobs/webui/jupyter-for-courses/) for more information):

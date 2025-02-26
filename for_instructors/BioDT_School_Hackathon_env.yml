@@ -16,6 +16,5 @@ dependencies:
   - matplotlib-scalebar
   - numpy
   - ipywidgets
-  - git+https://github.com/BioDT/general-soilgrids-soil-data.git
   - r-terra
   - r-raster
