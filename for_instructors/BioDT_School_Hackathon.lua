@@ -4,12 +4,14 @@ local project = "project_465001732"
 local projdir = pathJoin("/projappl", project)
 local workdir = pathJoin("/scratch", project, os.getenv("USER"))
 local basename = "BioDT"
+local userenvdir = pathJoin(workdir, basename, "env")
 
-setenv("PYTHONUSERBASE", pathJoin(workdir, basename, "env", "Python"))
-setenv("R_LIBS_USER", pathJoin(workdir, basename, "env", "R"))
+setenv("BIODT_USER_ENV", userenvdir)
+setenv("PYTHONUSERBASE", pathJoin(userenvdir, "Python"))
+setenv("R_LIBS_USER", pathJoin(userenvdir, "R"))
 
-execute {cmd="mkdir -p \"$PYTHONUSERBASE\"", modeA={"load"}}
-execute {cmd="mkdir -p \"$R_LIBS_USER\"", modeA={"load"}}
+-- Clean old user environment
+execute {cmd="rm -rf \"$BIODT_USER_ENV\"; mkdir -p \"$PYTHONUSERBASE\" \"$R_LIBS_USER\"", modeA={"load"}}
 
 -- Search for the latest env and add it to the path
 execute {cmd="export PATH=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1)/bin:$PATH; echo PATH=$PATH", modeA={"load"}}
