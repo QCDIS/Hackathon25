@@ -23,3 +23,12 @@ setenv("_COURSE_GIT_REF", "")
 
 -- lab / notebook / empty (defaults to jupyter)
 setenv("_COURSE_NOTEBOOK_TYPE", "lab")
+
+-- Clean slurm environment variables so that sbatch works from jupyter
+unsetenv("SLURM_MEM_PER_NODE")
+unsetenv("SLURM_EXPORT_ENV")
+
+-- Use the same project code for job submissions
+setenv("SLURM_ACCOUNT",  project)
+setenv("SBATCH_ACCOUNT", project)
+setenv("SALLOC_ACCOUNT", project)
