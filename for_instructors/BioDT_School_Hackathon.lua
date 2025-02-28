@@ -14,7 +14,7 @@ setenv("R_LIBS_USER", pathJoin(userenvdir, "R"))
 execute {cmd="rm -rf \"$BIODT_USER_ENV\"; mkdir -p \"$PYTHONUSERBASE\" \"$R_LIBS_USER\"", modeA={"load"}}
 
 -- Search for the latest env and add it to the path
-execute {cmd="export PATH=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1)/bin:$PATH; echo PATH=$PATH", modeA={"load"}}
+execute {cmd="export BIODT_ENV=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1); export PATH=$BIODT_ENV/bin:$PATH", modeA={"load"}}
 
 setenv("_COURSE_BASE_NAME", basename)
 setenv("_COURSE_NOTEBOOK", "Hackathon25/README.ipynb")
