@@ -16,5 +16,6 @@ dependencies:
   - matplotlib-scalebar
   - numpy
   - ipywidgets
+  - ipympl
   - r-terra
   - r-raster
