@@ -17,7 +17,7 @@ execute {cmd="rm -rf \"$BIODT_USER_ENV\"; mkdir -p \"$PYTHONUSERBASE\" \"$R_LIBS
 execute {cmd="export BIODT_ENV=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1); export PATH=$BIODT_ENV/bin:$PATH", modeA={"load"}}
 
 setenv("_COURSE_BASE_NAME", basename)
-setenv("_COURSE_NOTEBOOK", "Hackathon25/README.ipynb")
+setenv("_COURSE_NOTEBOOK", "Hackathon25/start_here.ipynb")
 setenv("_COURSE_GIT_REPO", "https://github.com/BioDT/Hackathon25.git")
 setenv("_COURSE_GIT_REF", "")
 

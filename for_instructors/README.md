@@ -10,7 +10,7 @@ Follow these steps:
 * Select "Jupyter for courses" app
 * Select BioDT School and Hackathon project and course module (no other options available for students unless they are using LUMI already)
 * Click Launch, wait, and then Connect to Jupyter
-* This notebook opens: [README.ipynb](../README.ipynb) (we can rename/modify this)
+* This notebook opens: [start_here.ipynb](../start_here.ipynb) (we can rename/modify this)
 
 Under the hood, this clones the present git repository to the user's personal workspace (`/scratch/project_465001732/$USER`) on LUMI and executes Jupyter in the prepared environment.
 The Jupyter session has a default time limit of 4 hours and resources defined by [resources.yml](BioDT_School_Hackathon-resources.yml) (see below for updating this file on LUMI).
