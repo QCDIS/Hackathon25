@@ -4,13 +4,13 @@
 
 ## Goal
 
-The goal of this exercise is to familiarize yourself with the data streaming capabilities of the IASDT model outputs from the BioDT OPeNDAP server. The corresponding Jupyter notebook is available at [IASDT.ipynb]("IASDT-outputs.ipynb").  
+The goal of this exercise is to familiarize yourself with the data streaming capabilities of the IASDT model outputs from the BioDT OPeNDAP server. The corresponding Jupyter notebook is available at [IASDT-outputs.ipynb](./IASDT-outputs.ipynb).  
 
 ## Background
 
 The Invasive Alien Species Digital Twin (IASDT) is a digital twin that uses dynamic data-driven workflows for joint species distribution modelling of invasive alien species (IAS) in continental Europe with Hierarchical Modelling of Species Communities ([HMSC](https://www.helsinki.fi/en/researchgroups/statistical-ecology/software/hmsc)) models. The IASDT uses biotic and abiotic datasets to estimate the current and forecast the future distribution of IAS in Europe under various climate scenarios. The IASDT is part of the [Biodiversity Digital Twin (BioDT)](https://biodt.eu) project, which is funded by the European Union.
 
-The workflows are written in Python and R, and are automated using the [PyDoit](https://pydoit.org) build automation tool. These workflows are meant to be executed on HPC systems, mainly [LUMI](https://lumi-supercomputer.eu). The workflows are designed to be modular and scalable based on the [TwinEco](#architectural-overview) framework. These workflows are designed to be used with the [OPeNDAP Cloud Server](#data-storage-and-availability) to serve data to third-party applications.
+The workflows are written in Python and R, and are automated using the [PyDoit](https://pydoit.org) build automation tool. These workflows are meant to be executed on HPC systems, mainly [LUMI](https://lumi-supercomputer.eu). The workflows are designed to be modular and scalable based on the [TwinEco](https://doi.org/10.1101/2024.07.23.604592) framework. These workflows are designed to be used with the [OPeNDAP Cloud Server](https://khant.pages.ufz.de/opendap/intro.html#) to serve data to third-party applications.
 
 The IASDT is a part of the [BioDT](https://biodt.eu) project, which is funded by the European Union. 
 

@@ -1,0 +1,24 @@
+Silt	Clay	Sand
+nan	nan	nan
+
+Layer	FC[V%]	PWP[V%]	POR[V%]	KS[mm/d]
+1.0000	nan	nan	nan	nan
+2.0000	nan	nan	nan	nan
+3.0000	nan	nan	nan	nan
+4.0000	nan	nan	nan	nan
+5.0000	nan	nan	nan	nan
+6.0000	nan	nan	nan	nan
+7.0000	nan	nan	nan	nan
+8.0000	nan	nan	nan	nan
+9.0000	nan	nan	nan	nan
+10.0000	nan	nan	nan	nan
+11.0000	nan	nan	nan	nan
+12.0000	nan	nan	nan	nan
+13.0000	nan	nan	nan	nan
+14.0000	nan	nan	nan	nan
+15.0000	nan	nan	nan	nan
+16.0000	nan	nan	nan	nan
+17.0000	nan	nan	nan	nan
+18.0000	nan	nan	nan	nan
+19.0000	nan	nan	nan	nan
+20.0000	nan	nan	nan	nan
