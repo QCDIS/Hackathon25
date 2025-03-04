@@ -1,5 +1,6 @@
 cores: 2
 time: "04:00:00"
-partition: "interactive"
+partition: "small"
 mem: "3GB"
 working_dir: "/scratch/$PROJECT"
+reservation: "BioDT"
