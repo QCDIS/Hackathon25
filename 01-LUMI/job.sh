@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #SBATCH --job-name=test           # Job name
 #SBATCH --output=test-output.txt  # Job standard output file
 #SBATCH --partition=small         # Partition name
