@@ -5,16 +5,18 @@ local projdir = pathJoin("/projappl", project)
 local workdir = pathJoin("/scratch", project, os.getenv("USER"))
 local basename = "BioDT"
 local userenvdir = pathJoin(workdir, basename, "env")
+local pythonuserbase = pathJoin(userenvdir, "Python")
 
 setenv("BIODT_USER_ENV", userenvdir)
-setenv("PYTHONUSERBASE", pathJoin(userenvdir, "Python"))
+setenv("PYTHONUSERBASE", pythonuserbase)
 setenv("R_LIBS_USER", pathJoin(userenvdir, "R"))
 
--- Clean old user environment
+-- Clean old user environment and create a new one
 execute {cmd="rm -rf \"$BIODT_USER_ENV\"; mkdir -p \"$PYTHONUSERBASE\" \"$R_LIBS_USER\"", modeA={"load"}}
+prepend_path("PATH", pathJoin(pythonuserbase, "bin"))
 
 -- Search for the latest env and add it to the path
-execute {cmd="export BIODT_ENV=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1); export PATH=$BIODT_ENV/bin:$PATH", modeA={"load"}}
+execute {cmd="export BIODT_ENV=$(ls -d " .. projdir .. "/BioDT_School_Hackathon_env/v* | tail -n 1); export PATH=$BIODT_ENV/bin:$PATH; mkdir -p `python3 -m site --user-site`", modeA={"load"}}
 
 setenv("_COURSE_BASE_NAME", basename)
 setenv("_COURSE_NOTEBOOK", "Hackathon25/start_here.ipynb")
