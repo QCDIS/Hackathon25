@@ -32,7 +32,7 @@ raster_data_raster <- rast(raster_data_regular)
 
 pal <- leaflet$colorNumeric(
   "plasma",
-   domain = minmax(raster_data_raster),
+   domain = c(0, 10),
     na.color = "transparent")
 
 ias_app_ui <-
@@ -50,11 +50,11 @@ ias_app_server <- function(input, output, session) {
     leaflet$leaflet() |>
       leaflet$addTiles() |>
         leaflet$setView(lng = 10, lat = 50, zoom = 4) |>
-          addRasterImage(
+          leaflet$addRasterImage(
             raster_data_raster,
             colors = pal
           )
   })
 }
 
-shinyApp(ui = ias_app_ui, server = ias_app_server)
+shiny$shinyApp(ui = ias_app_ui, server = ias_app_server)

@@ -1,5 +1,5 @@
 box::use(
-  dplyr[mutate, filter, slice],
+  dplyr[mutate, filter, slice, pull],
   bslib,
   leaflet,
   stringr[str_detect],
@@ -10,7 +10,7 @@ box::use(
 )
 
 box::use(
-  logic/helper[process_raster_file],
+  `05-GUI`/logic/helper[process_raster_file],
 )
 
 # Define the base URL for the OPeNDAP server
@@ -28,10 +28,7 @@ predictions_summary <- predictions_summary |>
     tif_path = paste0(base_url, "/", tif_path_mean)
   )
 
-pal <- leaflet$colorNumeric(
-  "plasma",
-   domain = minmax(raster_data_raster),
-    na.color = "transparent")
+
 
 ias_app_ui <-
   bslib$page_fluid(
@@ -79,7 +76,10 @@ ias_app_server <- function(input, output, session) {
         leaflet$clearControls() |>
           leaflet$addRasterImage(
         ras,
-        colors = pal,
+        colors = leaflet$colorNumeric(
+          "plasma",
+           domain = minmax(ras),
+            na.color = "transparent"),
         opacity = 0.85,
         project = TRUE
       )
@@ -87,4 +87,4 @@ ias_app_server <- function(input, output, session) {
   )
 }
 
-shinyApp(ui = ias_app_ui, server = ias_app_server)
+shiny$shinyApp(ui = ias_app_ui, server = ias_app_server)

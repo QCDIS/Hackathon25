@@ -3,7 +3,6 @@ box::use(
   shiny,
 )
 
-
 n <- 200
 
 # Define the UI

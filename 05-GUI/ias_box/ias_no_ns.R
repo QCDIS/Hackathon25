@@ -1,6 +1,6 @@
 box::use(
-  shiny[tagList, shinyApp, tags, HTML, icon, div, span, strong, moduleServer, fluidRow, radioButtons, column, uiOutput, conditionalPanel, sliderInput, downloadButton, reactive, req, observeEvent, updateSliderInput, renderUI, downloadHandler],
-  bslib[layout_sidebar, sidebar, card, card_header, card_body, card_footer, page_fluid],
+  shiny[tagList, shinyApp, tags, HTML, h1, icon, div, span, strong, moduleServer, fluidRow, radioButtons, column, uiOutput, conditionalPanel, sliderInput, downloadButton, reactive, req, observeEvent, updateSliderInput, renderUI, downloadHandler],
+  bslib[layout_sidebar, sidebar, card, bs_theme, card_header, card_body, card_footer, page_fluid],
   shinyWidgets[pickerInput, switchInput],
   leaflet[leafletOutput, renderLeaflet, leaflet, addTiles, setView, addEasyButton, easyButton, JS, leafletOptions, colorNumeric, leafletProxy, clearImages, clearControls, addRasterImage, evalFormula],
   dplyr[filter, mutate, slice],
@@ -10,7 +10,7 @@ box::use(
 
 # based on my experience depending on usage of RStudio, Positron, or VS Code sometimes the path is relative to project, or to the file
 box::use(
-  ias_box / logic / helper[process_raster_file, addLegend_decreasing],
+  `05-GUI`/ ias_box / logic / helper[process_raster_file, addLegend_decreasing],
 )
 
 # Define the base URL for the OPeNDAP server
@@ -44,7 +44,7 @@ climate_model_mapping <- list(
 ias_app_ui <-
   page_fluid(
   theme = bs_theme(bootswatch = "minty", primary = "#A0522D"),
-  useShinyjs(), # Initialize shinyjs
+ # Initialize shinyjs
 
   tags$head(
     tags$style(HTML("
