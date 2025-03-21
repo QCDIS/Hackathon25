@@ -1,10 +1,10 @@
-# Hackathon: Containers in a BioDT way
+# Hackathon: Containers in BioDT
 
 This is a minimal demo on containers as they are set up and used in BioDT.
 
 ## Building a new image
 
-Build a new image using `Dockerfile` and tag it as `test:0.1.0`:
+Build a new image using [`Dockerfile`](Dockerfile) and tag it as `test:0.1.0`:
 
     docker buildx build --platform linux/amd64 --build-arg R_VERSION=4.3.3 -t test:0.1.0 .
 
