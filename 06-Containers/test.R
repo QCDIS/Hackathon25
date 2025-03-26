@@ -1,3 +1,0 @@
-library(terra)
-
-print("hello")
